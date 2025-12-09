@@ -1,0 +1,192 @@
+.working-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.construction-site {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Builder */
+.builder {
+  position: absolute;
+  left: 50px;
+  top: 80px;
+  animation: builderWork 2s infinite ease-in-out;
+}
+
+.builder-head {
+  width: 20px;
+  height: 20px;
+  background: #ffb366;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+
+.builder-body {
+  width: 30px;
+  height: 40px;
+  background: #4a90e2;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  left: -5px;
+}
+
+.builder-arm {
+  width: 15px;
+  height: 25px;
+  background: #ffb366;
+  border-radius: 10px;
+  position: absolute;
+  top: 15px;
+}
+
+.builder-arm.left {
+  left: -15px;
+  transform: rotate(-45deg);
+  animation: armSwing 1.5s infinite ease-in-out;
+}
+
+.builder-arm.right {
+  right: -15px;
+  transform: rotate(45deg);
+  animation: armSwing 1.5s infinite ease-in-out reverse;
+}
+
+.builder-leg {
+  width: 12px;
+  height: 20px;
+  background: #333;
+  border-radius: 6px;
+  position: absolute;
+  bottom: -20px;
+}
+
+.builder-leg.left {
+  left: 2px;
+}
+
+.builder-leg.right {
+  right: 2px;
+}
+
+/* Tools */
+.tools {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.hammer, .screwdriver, .wrench {
+  width: 30px;
+  height: 8px;
+  background: #8b4513;
+  border-radius: 4px;
+  margin: 5px 0;
+  animation: toolBounce 1s infinite ease-in-out;
+}
+
+.hammer::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 20px;
+  background: #8b4513;
+  top: -10px;
+  left: 5px;
+}
+
+.screwdriver::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 15px;
+  background: #8b4513;
+  top: -8px;
+  left: 8px;
+}
+
+.wrench::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 6px;
+  background: #8b4513;
+  top: -3px;
+  left: 2px;
+  border-radius: 3px;
+}
+
+/* Materials */
+.materials {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.brick {
+  width: 25px;
+  height: 12px;
+  background: #d2691e;
+  margin: 2px;
+  border-radius: 2px;
+  animation: brickStack 2s infinite ease-in-out;
+}
+
+/* Progress Bar */
+.progress-bar {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  right: 20px;
+  height: 8px;
+  background: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #8BC34A);
+  width: 0%;
+  animation: progressFill 3s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes builderWork {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes armSwing {
+  0%, 100% { transform: rotate(-45deg); }
+  50% { transform: rotate(-30deg); }
+}
+
+@keyframes toolBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes brickStack {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes progressFill {
+  0% { width: 0%; }
+  50% { width: 60%; }
+  100% { width: 100%; }
+} 
