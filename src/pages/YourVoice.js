@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import FollowingPost from '../components/FollowingPost';
 import InsidePost from '../components/InsidePost';
 import CreacioPosts from '../components/CreacioPosts';
+import DescobrirPersones from '../components/DescobrirPersones';
 const YourVoice = () => {
   const { t } = useLanguage();
   
@@ -29,7 +30,8 @@ const YourVoice = () => {
           <div className='all-your-voice-container'>
             {/* <FollowingPost/> */}
             {/* <InsidePost/> */}
-            <CreacioPosts/>
+            {/* <CreacioPosts/>             */}
+            <DescobrirPersones/>
           </div>
           <Footer/>
         </div>

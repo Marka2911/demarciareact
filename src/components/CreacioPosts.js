@@ -1,17 +1,15 @@
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 
+import BotonsCreacioPosts from "./BotonsCreacioPosts";
+import CrearProposta from "./CrearProposta";
+import CrearVotacio from "./CrearVotacio";
 function CreacioPosts() {
   return (
     <div className="creacio-posts-container">
-      <div className="creacio-posts-buttons">
-        <Button variant="contained" size="large" className="creacio-posts-button">Crear proposta de llei</Button>
-      </div>
-      <div className="creacio-posts-buttons">
-        <Button variant="contained" size="large" className="creacio-posts-button">Votació random</Button>
-      </div>
-      <div className="creacio-posts-buttons">
-        <Button variant="contained" size="large" className="creacio-posts-button">Crear sala privada</Button>
-      </div>
+        {/* <BotonsCreacioPosts/> */}
+        {/* <CrearProposta/> */}
+        {/* <CrearVotacio/> */}
+
     </div>
   );
 }
